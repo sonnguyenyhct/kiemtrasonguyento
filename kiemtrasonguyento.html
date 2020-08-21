@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra so nguyen to</title>
+</head>
+<body>
+    <script>
+        function isPrime(numberCheck){
+            for (let count = 2; count <= Math.sqrt(numberCheck); count++){
+                if(numberCheck%count === 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+        let total = "";
+        for (let i = 2; i < 10000; i++){
+            if(isPrime(i)){
+             total += i + " ";
+            }
+        }
+        document.write(total);
+    </script>
+</body>
+</html>
